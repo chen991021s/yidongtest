@@ -1,0 +1,154 @@
+/*-----------第一个底部样式开始------------*/
+#bottom{
+	width: 100%;
+	height: 230px;
+	margin-top: 10px;
+}
+#bottom_content{
+	width: 1300px;
+	height: 230px;
+	margin: auto;
+}
+#bottom_content>ul{
+	width: 1200px;
+	height: 200px;
+	margin-left: 3%;
+	padding-left: 20px;
+	padding-top: 20px;
+	border: 1px solid #DCDCDC;
+}
+#bottom_content>ul>li{
+	width: 234px;
+	float: left;
+	padding-bottom: 7px;
+}
+#bottom_content>ul>li>a:hover{
+	color: #0085D9;
+}
+#bottom_content>ul>li>a{
+	color: #808080;
+	font-size: 14px;
+}
+#bottom_content .bottom_li>a{
+	font-size: 15px;
+	color: #222222;
+	font-weight: bold;
+}
+/*-----------第一个底部样式结束------------*/
+/*-----------第二个底部样式开始------------*/
+#bottom2{
+	width: 100%;
+	height: 230px;
+	margin-top: 20px;
+}
+#bottom2_content{
+	width: 1300px;
+	height: 200px;
+	margin: auto;
+	padding-top: 20px;
+	text-align: center;
+	font-size: 13px;
+	color: #808080;
+}
+#bottom2_content>p{
+	margin-bottom: 10px;
+}
+#bottom2_content>span{
+	color: #222222;
+	margin-left: 10px;
+}
+#bottom2_content>span:hover{
+	color: #0085D9;
+	text-decoration: underline;
+	cursor: pointer;
+}
+/*-----------第二个底部样式结束------------*/
+/*-----------页面左边1F-5F样式开始------------*/
+#content_left{
+	width: 35px;
+	height: 260px;
+	position: fixed;
+	bottom: 170px;
+	left: 0px;
+	z-index: 9999;
+	text-align: center;
+	color: #808080;
+	display: none;
+}
+#content_left>ul{
+	width: 40px;
+}
+#content_left>ul>li{
+	width: 35px;
+	height: 40px;
+	font-size: 13px;
+	line-height: 40px;
+	cursor: pointer;
+	border-bottom:1px #DCDCDC dashed ;
+}
+#content_left>ul>li>a{
+	width: 35px;
+	height: 40px;
+	display: inline-block;
+	color: #808080;
+	padding-top: 6px;
+	line-height: 16px;
+}
+#content_left>a{
+	display: inline-block;
+	width: 35px;
+	height: 40px;
+	padding-top: 10px;
+	background-color: #808080;
+	margin-top: 10px;
+	font-size: 14px;
+	color: white;
+}
+#content_left>ul>li .gudileftli_a{	
+	background-color: #0085D9;
+	color: white;
+}
+/*-----------页面左边1F-5F样式结束------------*/
+/*-----------页面右边固定样式开始------------*/
+#content_right{
+	width: 113px;
+	height: 260px;
+	position: fixed;
+	bottom: 80px;
+	right: 0px;
+	z-index: 9999;
+}
+#content_right>img{
+	float: right;
+	margin-right: 5px;
+	margin-bottom: 10px;
+}
+#content_right>ul{
+	width: 115px;
+	float: right;
+}
+#content_right>ul>li{
+	width: 110px;
+	height: 43px;
+	text-align: center;
+	line-height: 40px;
+	cursor: pointer;
+}
+#content_right>ul>li>span{
+	font-size: 15px;
+	display: none;
+	font-weight: bold;
+	color: white;
+}
+#content_right>ul>li>img{
+	float: right;
+	background-color: #707070;
+	padding-left: 5px;
+	padding-top: 5px;
+	padding-right: 5px;
+	padding-bottom: 5px;
+}
+.adr{
+	background-color: #0085D9;
+}
+/*-----------页面右边固定样式结束------------*/
