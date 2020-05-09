@@ -1,0 +1,690 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="css/index.css"/>
+		<link rel="stylesheet" type="text/css" href="css/index2.css"/>
+		<link rel="stylesheet" type="text/css" href="css/index3.css"/>
+		<link rel="stylesheet" type="text/css" href="css/bottom.css"/>
+	</head>
+	<script src="js/vue.min.js" type="text/javascript" charset="utf-8"></script>
+	<body>
+		<div id="bigbox">
+			<div id="top1">
+				<div id="top1_1">
+					<div id="top1_left">
+						<span class="top_span1">欢迎来到中国移动网站</span>
+						<a href="#" class="top_a">请登录</a>
+					</div>
+					<div id="top1_right">
+						<ul class="top1_ul">
+							<li><a href="#">个人中心</a></li>
+							<li id="top1_li1">
+								<img src="img/top1img/手机.png " align="center"/>
+								<img src="img/top1img/头部二维码.png" align="center" width="20px" height="20px"style="float:right;margin-left: -18px;"/>
+								<a href="#">中国移动客户端</a>
+								<ul id="top1_li1_img">
+									<li><img src="img/top1img/头部二维码.png"/><br/><span>扫一扫，随时查话费</span></li>
+								</ul>
+							</li>
+							<li><a href="#">积分商城</a></li>
+							<li><a href="#" id="top1_li_a">能力开放商店</a></li>
+							<li id="top1_li2"><a href="#">关于中国移动</a></li>
+							<li><a href="#">证照信息</a></li>
+							<li><a href="#">联系我们</a></li>
+							<li><a href="#">政企客户</a></li>
+							<li><a href="#">ENGLISH</a></li>
+						</ul>
+					</div>			
+				</div>				
+			</div>
+			<div id="top2">
+				<div id="top2_1">
+					<div id="shan">
+						<div id="shan_left">
+							<img src="img/top2img/移动login.png" />
+							<div id="zhengzhou">郑州</div>
+							<img src="img/top2img/向下.png" style="cursor: pointer;"/>
+							<div id="yincandiv">
+								<ul id="shan_left_ul1">
+										<li><span>河南</span><span id="quanbu">[返回全部省份]</span></li>
+										<span v-for="ul1s in uls1">				
+											{{ ul1s}}
+										</span>
+								</ul>
+								<ul id="shan_left_ul">
+										<li><span>全部省份</span></li>
+										<li v-for="ul1s in uls">
+											<span id="shan_left_ul_span"></span>
+											{{ ul1s.zhimu }}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{ ul1s.sheng }}
+										</li>
+								</ul>
+							</div>						
+						</div>
+						<div id="shan_right">
+							<div id="shan_right_top">
+								<input type="text" placeholder="宽带"/>
+								<button>搜索</button>
+							</div>
+							<div id="shan_right_xia">
+								<ul>
+									<li class="shan_right_xia_li">5G正式商用</li>
+									<li class="shan_right_xia_li">信用购机</li>
+									<li class="shan_right_xia_li">携号入网</li>
+									<li class="shan_right_xia_li">选号入网</li>
+									<li class="shan_right_xia_li">流量加油包</li>
+									<li class="shan_right_xia_li">跨区补卡</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div id="top2s">
+				<div id="top2_2">
+					<ul>
+						<li>全部产品服务</li>
+						<li style="color: cornflowerblue;">首页</li>
+						<li>移动商城</li>
+						<li>我的移动</li>
+						<li>服务中心</li>
+					</ul>
+				</div>
+				<div id="top2_3">
+					<div id="top2_3_auto">
+						<img src="img/top2img/移动login.png"/>
+						<ul>
+							<li class="div2_3_li">首页</li>
+							<li>移动商城</li>
+							<li>我的移动</li>
+							<li>服务中心</li>
+						</ul>
+						<div id="top2_3_div">
+							<input type="text" placeholder="宽带"/>
+							<button>搜索</button>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div id="top3">
+				<div id="top3_1">
+					<div id="top3_left">
+						<ul>
+							<li class="top3_left_li"><a href="#"><img src="img/top3img/20180103153851385c3d.png" align="center"><span>办业务</span><span class="top3_left_span1">></span></a>
+							<div id="top3_left_div0" class="top3_left_div">
+								<ul>
+									<li v-for="ulli in ulss">
+										<span>{{ulli.name}}</span><span>></span>
+										<span>{{ulli.xiangxi}}</span> <span>|</span> 
+										<span>{{ulli.move}}</span>
+									</li>
+								</ul>
+							</div>	
+							</li>
+							<li class="top3_left_li"><a href="#"><img src="img/top3img/20180103153956878xAe.png" align="center"><span>买手机</span><span class="top3_left_span1">></span></a>
+							<div id="top3_left_div1" class="top3_left_div">
+								<ul>
+									<li v-for="ulli in ulss2">
+										<span>{{ulli.name}}</span><span>></span>
+										<div>
+											<span>{{ulli.xiangxi}}</span> <span>|</span> 
+										<span>{{ulli.move}}</span>
+										</div>
+										
+									</li>
+								</ul>
+							</div>		
+							</li>
+							<li class="top3_left_li"><a href="#"><img src="img/top3img/20180103154107228twH.png" align="center"><span>套餐/靓号</span><span class="top3_left_span1">></span></a>
+							<div id="top3_left_div2" class="top3_left_div">
+								<ul>
+									<li v-for="ulli in ulss">
+										<span>{{ulli.name}}</span><span>></span>
+										<span>{{ulli.xiangxi}}</span> <span>|</span> 
+										<span>{{ulli.move}}</span>
+									</li>
+								</ul>
+							</div>	
+							</li>
+							<li class="top3_left_li"><a href="#"><img src="img/top3img/20180103154140127qaT.png" align="center"><span>家庭业务</span><span class="top3_left_span1">></span></a>
+							<div id="top3_left_div3" class="top3_left_div">
+								<ul>
+									<li v-for="ulli in ulss">
+										<span>{{ulli.name}}</span><span>></span>
+										<span>{{ulli.xiangxi}}</span> <span>|</span> 
+										<span>{{ulli.move}}</span>
+									</li>
+								</ul>
+							</div>
+							</li>
+							<li class="top3_left_li"><a href="#"><img src="img/top3img/20180103154217680JhN.png" align="center"><span>智能硬件</span><span class="top3_left_span1">></span></a>
+							<div id="top3_left_div4" class="top3_left_div">
+								<ul>
+									<li v-for="ulli in ulss">
+										<span>{{ulli.name}}</span><span>></span>
+										<span>{{ulli.xiangxi}}</span> <span>|</span> 
+										<span>{{ulli.move}}</span>
+									</li>
+								</ul>
+							</div>
+							</li>
+							<li class="top3_left_li"><a href="#"><img src="img/top3img/20180103154256402dD3.png" align="center"><span>查询服务</span><span class="top3_left_span1">></span></a>
+							<div id="top3_left_div5" class="top3_left_div">
+								<ul>
+									<li v-for="ulli in ulss">
+										<span>{{ulli.name}}</span><span>></span>
+										<span>{{ulli.xiangxi}}</span> <span>|</span> 
+										<span>{{ulli.move}}</span>
+									</li>
+								</ul>
+							</div>
+							</li>
+							<li class="top3_left_li"><a href="#"><img src="img/top3img/20180103154330214a1x.png" align="center"><span>特色专区</span><span class="top3_left_span1">></span></a>
+							<div id="top3_left_div6" class="top3_left_div">
+								<ul>
+									<li v-for="ulli in ulss">
+										<span>{{ulli.name}}</span><span>></span>
+										<span>{{ulli.xiangxi}}</span> <span>|</span> 
+										<span>{{ulli.move}}</span>
+									</li>
+								</ul>
+							</div>
+							</li>
+						</ul>					
+					</div>
+					<div id="top3_content">
+						<ul>
+							<li v-for="ulli in uls">
+								<img v-bind:src="ulli.imgUrl"/>
+							</li>
+						</ul>
+						<ol id="top3_content_lo">  
+							<li class="actives"></li>  
+						    <li></li>  
+							<li></li>  
+							<li></li>  
+							<li></li>  
+							<li></li>  
+							<li></li>  
+							<li></li>  
+							<li></li>  
+						</ol>  
+						<button id="left"><b><</b></button>
+						<button id="right"><b>></b></button>
+					</div>
+					<div id="top3_right">						
+						<div id="top3_right_top">
+							<ul>
+								<li v-for="li in topuls">
+									<img v-bind:src="li.imgs"/>
+									<p>{{li.name}}</p>
+								</li>
+							</ul>
+						</div>
+						<div id="top3_right_bottom">
+							<span class="span1">花费</span><span>流量</span>
+							<div id="div1">
+								<input type="text" placeholder="请输入手机号" class="inputs"/>
+								<ul class="div_ul">
+									<li class="div1_li">30</li>
+									<li>50</li>
+									<li>100</li>
+									<li>300</li>
+									<li>其他</li>
+								</ul>
+							</div>
+							<div id="div2">
+								<input type="text" placeholder="请输入手机号" class="inputs"/>
+								<ul class="div_ul">
+									<li class="div1_li">1G</li>
+									<li>2G</li>
+									<li>3G</li>
+									<li>5G</li>
+									<li>其他</li>
+								</ul>
+							</div>
+							<button>立即充值</button>
+						</div>
+					</div>
+				</div>
+				
+			</div>
+			<div id="top4">
+				<div id="top4_auto">
+					<div id="top4_img">
+						<img  src="img/top4img/youhui.jpg"/>
+					</div>
+					<div id="top4_ul">
+						<ul>
+							<li v-for="imgs in lisimg">
+								<img v-bind:src="imgs.imgs"/>
+							</li>
+						</ul>
+					</div>
+					<button id="top4_auto_left"><</button>
+					<button id="top4_auto_right">></button>
+				</div>
+				
+					
+			</div>
+			<div id="bigcontent1" class="bigcontent1">
+				<div class="bigcontent1_top">
+					<span>1F享优惠</span>
+					<p>
+						<span>全部</span>
+						<span><a href="#">提速降费</a></span>
+					</p>					
+				</div>
+				<div class="bigcontent1_content">
+					<ul>
+						<li>
+							<img src="img/contentimg/20191212164925607Zid_0.jpg" class="bigcontent1_content_img"/>
+							<p class="bigcontent1_content_p">一台多才的行车记录仪<br/><span>微光夜视 停车监控 手机直连</span></p>
+							<img src="img/contentimg/20190628194546288yus.jpg" align="top"/>
+						</li>
+						<li>
+							<p>5G手机优惠购<br/><span>购机最高优惠3780元</span></p>
+							<img src="img/contentimg/20200221111602406aXs.jpg" />
+							<p>宽带预约<br/><span>一键预约，坐等安装</span></p>
+							<img src="img/contentimg/201912271638568955Rl.png" />
+						</li>
+						<li>
+							<p class="bigcontent1_content_p2">乡音卡-19套餐<br/><span>30定向，1G通用</span></p>
+							<img src="img/contentimg/20200114113619871SAe.jpg" />
+						</li>
+						<li>
+							<p>和目智能路由器<br/><span>型号强，覆盖广</span></p>
+							<img src="img/contentimg/201906281951312292Yc.jpg" />
+							<p>5G直通<br/><span>全球通客户享直升5G权益</span></p>
+							<img src="img/contentimg/20191227170315832LQt.jpg" />
+						</li>
+					</ul>
+				</div>
+			</div>
+			<div id="bigcontent2" class="bigcontent1">
+				<div class="bigcontent1_top">
+					<span>2F业务推荐</span>
+					<p style="color: #E40077;">全部</p>					
+				</div>
+				<div class="bigcontent1_content">
+					<ul>
+						<li>
+							<img src="img/contentimg/20190109145307077dva_0.jpg" width="495px" height="325px"/>
+							<p class="bigcontent1_content_p">流量可选包<br/><span>月月有流量，上网更方便</span></p>
+							<img src="img/contentimg/20171120102513782zFd.jpg" align="top"/>
+						</li>
+						<li>
+							<p>流量加油包<br/><span>随时随地补充流量，方便快捷</span></p>
+							<img src="img/contentimg/20171120102635656N18.jpg" />
+							<p>流量日套餐<br/><span>流量有效期24小时</span></p>
+							<img src="img/contentimg/20171120102813587Z2b.jpg" />
+						</li>
+						<li>
+							<p>流量小时套餐<br/><span>流量有效期1-4小时</span></p>
+							<img src="img/contentimg/20171120103014938Y0g.jpg" />
+							<p>7天流量包<br/><span>流量有效期7天</span></p>
+							<img src="img/contentimg/201711201033212782cC.jpg" />
+						</li>
+						<li>
+							<p>家庭宽带<br/><span>移动极光宽带，引领千兆时代</span></p>
+							<img src="img/contentimg/20171120103437349j8o.jpg" />
+							<p>VoLTEG高清语音<br/><span>接通更快，音质更好</span></p>
+							<img src="img/contentimg/201907301835186691dv.jpg" />
+						</li>
+					</ul>
+				</div>
+			</div>
+			<div id="bigcontent3" class="bigcontent1">
+				<div class="bigcontent1_top">
+					<span>3F手机专区</span>
+					<p>
+						<span>全部</span>
+						<span><a href="#">千元机</a></span>
+						<span><a href="#">信用购机</a></span>
+					</p>				
+				</div>
+				<div id="bigcontent3_content" class="bigcontent1_content">
+					<ul>
+						<li>
+							<p class="bigconten3_p1">华为P40<br/>5G手机<br/><span>超感知影像</span><br/><span>4,488元</span></p>
+							<img src="img/contentimg/20200409161909291dm8.jpg" class="bigcontent1_content_img"/>
+							<ul class="bigcontent3_ul_ul">
+								<li v-for="ps in uls">
+									<img v-bind:src="ps.imgs"/>
+								</li>
+							</ul>
+						</li>
+						<li>
+							<p>华为Mate30<br/><span>徕卡摄像头</span><br/><span style="color: #E40077;">3,699元</span></p>
+							<img src="img/contentimg/20200409161249804pAM.jpg" />
+							<p>iPhone11<br/><span>1200万像素双摄</span><br/><span style="color: #E40077;">5,199元</span></p>
+							<img src="img/contentimg/20200120143630787195.jpg" />
+						</li>
+						<li>
+							<p>Mate30 Pro<br/><span>5G手机</span><br/><span style="color: #E40077;">6,399元</span></p>
+							<img src="img/contentimg/201912091108355021fi.jpg" />
+							<p>realme X2<br/><span>6400万鹰眼四射</span><br/><span style="color: #E40077;">1,799元</span></p>
+							<img src="img/contentimg/20200409173700853lqr.jpg" />
+						</li>
+						<li>
+							<p>华为P30 Pro<br/><span>5G手机</span><br/><span style="color: #E40077;">6,488元</span></p>
+							<img src="img/contentimg/20200409170205503q2x.jpg" />
+							<p>华为 畅享 10G<br/><span>AI双摄</span><br/><span style="color: #E40077;">999元</span></p>
+							<img src="img/contentimg/20200103165622645gEC.jpg" />
+						</li>
+					</ul>
+				</div>
+			</div>
+			<div id="bigcontent4" class="bigcontent1">
+				<div class="bigcontent1_top">
+					<span>4F智能硬件</span>
+					<p>
+						<span>全部</span>
+						<span><a href="#">智联品质生活</a></span>
+					</p>				
+				</div>
+				<div id="bigcontent4_content" class="bigcontent1_content">
+					<ul>
+						<li>
+							<ul class="bigcontent4_content_ul_ul">
+								<li>
+									<p class="bigconten4_p">和目C13智能摄像头<br/><span style="color: #222222;">多方位覆盖所需29项身体指标</span><br/><span>88元</span></p>
+									<img src="img/contentimg/20180817174011260Idj.png" />
+								</li>
+								<li>
+									<p class="bigconten4_p"><span>中国移动无线充电器快充</span><br/><span>39元</span></p>
+									<img src="img/contentimg/20200120151225574sxp.png" />
+								</li>
+								<li>
+									<p class="bigconten4_p"><span>和路通X2智能后视镜</span><br/><span>售罄</span></p>
+									<img src="img/contentimg/20190308101635212wD4.png" />
+								</li>
+								<li>
+									<p class="bigconten4_p"><span>中国移动千里眼A11</span><br/><span>369元</span></p>
+									<img src="img/contentimg/201903081126317372cb.jpg" />
+								</li>
+							</ul>
+						</li>
+						<li>
+							<p>和睦智能门锁<br/><span>蓝牙开锁，智能安装</span><br/><span style="color: #E40077;">699元</span></p>
+							<img src="img/contentimg/fef1ff95daf7beedd35b40ff5d531556_20180926170542678qd5.png" />
+							<p>和睦智能路由器双频<br/><span>双频四天线 无惧穿墙</span><br/><span style="color: #E40077;">199元</span></p>
+							<img src="img/contentimg/20180712154719109TLn.png" />
+						</li>
+						<li>
+							<p class="bigconten4_p1">有品智能体重秤<br/><span>多方位覆盖所需29项身体指标</span><br/><span>88元</span></p>
+							<img src="img/contentimg/20181009140051484Fp1.png" height="248px"/>
+						</li>
+						<li>
+							<p>咪咕漫威珍藏版礼盒<br/><span>充电宝，数据线，音箱一盒配齐</span><br/><span style="color: #E40077;">299元</span></p>
+							<img src="img/contentimg/20190304154148507RLv.jpg" />
+							<p>小度在家<br/><span>向往的生活同款智能音箱</span><br/><span style="color: #E40077;">379元</span></p>
+							<img src="img/contentimg/20200409171245132JpX.jpg" />
+						</li>
+					</ul>
+				</div>
+			</div>
+			<div id="bigcontent5">
+				<div class="bigcontent1_top">
+					<span>5F咪咕娱乐</span>
+					<p>
+						<span>全部</span>
+						<span><a href="#">王者荣耀</a></span>
+						<span><a href="#">贝拉日记</a></span>
+						<span><a href="#">一生所爱</a></span>
+					</p>					
+				</div>
+				<div id="bigcontent5_content">
+					<div id="bigcontent5_content_left">
+						<ul>
+							<li class="migus"><p>咪咕音乐<br/><span>放肆听 趣玩乐</span></p></li>
+							<li><p>咪咕游戏<br/><span>快乐一触发</span></p></li>
+							<li><p>咪咕阅读<br/><span>听有趣 阅不同</span></p></li>
+							<li><p>咪咕圈圈<br/><span>次元C站 给你好看</span></p></li>
+						</ul>
+					</div>
+					<div id="bigcontent5_content_left2">
+						<ul>
+							<li class="li1">
+								<div class="li_div1">
+									<p>新歌打榜<span id="first_span">1/2</span><span class="li1_span"><</span><span  class="li1_span2">></span></p>
+								</div>
+								<div class="li_div2">
+									<ul>
+										<li v-for="lige in uls">
+											<img v-bind:src="lige.imgs" align="center"/>
+											<p>{{lige.name}}<br/>{{lige.zhuozhe}}</p>
+										</li>
+									</ul>
+								</div>
+							</li>
+							<li class="li2">
+								<div class="li_div1">
+									<p>热门游戏<span id="first_span2">1/2</span><span class="li2_span"><</span><span  class="li2_span2">></span></p>
+								</div>
+								<div class="li_div2">
+									<ul>
+										<li v-for="lige in uls2">
+											<img v-bind:src="lige.imgs" align="center"/>
+											<p>{{lige.name}}<br/>{{lige.zhuozhe}}</p>
+										</li>
+									</ul>
+								</div>
+							</li>
+							<li class="li3">
+								<div class="li_div1">
+									<p>重磅推荐<span id="first_span3">1/2</span><span class="li3_span"><</span><span  class="li3_span2">></span></p>
+								</div>
+								<div class="li_div2">
+									<ul>
+										<li v-for="lige in uls3">
+											<img v-bind:src="lige.imgs" align="center"/>
+											<p>{{lige.name}}<br/>{{lige.zhuozhe}}</p>
+										</li>
+									</ul>
+								</div>
+							</li>
+							<li class="li4">
+								<div class="li_div1">
+									<p>精品动漫<span id="first_span4">1/2</span><span class="li4_span"><</span><span  class="li4_span2">></span></p>
+								</div>
+								<div class="li_div2">
+									<ul>
+										<li v-for="lige in uls4">
+											<img v-bind:src="lige.imgs" align="center"/>
+											<p>{{lige.name}}<br/>{{lige.zhuozhe}}</p>
+										</li>
+									</ul>
+								</div>
+							</li>
+						</ul>
+					</div>
+					<div id="bigcontent5_content_right">
+						<ol>
+							<li></li>
+						</ol>
+						<img src="img/contentimg/89cb84871167de3c9b0f1c5c892ab2c5_2018092917243287782L.jpg" />
+						<div id="content5_right1">
+							<div class="bigcontent5_div">
+								<p>流行乐风向标<span id="first5_span">1/2</span><span class="content5_span"><</span><span  class="content5_span2">></span></p>
+							</div>
+							<div class="bigcontent5_div2">
+								<ul>
+									<li v-for="lige in uls">
+										<img v-bind:src="lige.imgs" align="center"/>
+										<p>{{lige.name}}</p>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div id="bigcontent6">
+				<div class="bigcontent6_top">
+					<span>猜你喜欢</span>
+					<p>
+						<span>换一批</span>
+						<span><img src="img/likeimg/shua.png" align="center"/></span>
+					</p>					
+				</div>
+				<div class="bigcontent6_content">
+					<div class="ul_div">
+						<ul>
+							<li v-for="imgs in uls">
+								<p><span>{{imgs.top1}}</span><br><span>{{imgs.top2}}</span></p>
+								<img v-bind:src="imgs.img" height="160px"/>
+								<p>{{imgs.bottom}}</p>
+							</li>
+						</ul>
+					</div>				
+				</div>
+			</div>
+			<div id="bigcontent7">
+				<div class="bigcontent6_top">
+					<span>特色专区</span>					
+				</div>
+				<div class="bigcontent7_content">
+					<div class="big7_div1">
+						<ul>
+							<li v-for="imgs in uls">
+								<img v-bind:src="imgs.img" align="center"/>
+								<p><span>{{imgs.spans1}}</span><br/><span>{{imgs.spans2}}</span></p>
+							</li>
+						</ul>
+					</div>
+					<div class="big7_div2">
+						<p class="big7_p">
+							<img src="img/teseimg/bos.png" align="center"/>公告: 
+							<span>-中共中国移动通信集团有限公司党组关于十九届中...</span>
+							<span>2020-03-21</span>
+						</p>
+						<ul>
+							<li>-关于河南移动部分业务调整公告<span>2020-04-16</span></li>
+							<li>-关于部分业务调整的详细公告 &nbsp;&nbsp;&nbsp;<span>2020-04-10</span></li>
+							<li>-中国移动权益合作公开招募公告<span>2020-03-21</span></li>
+						</ul>
+						<span class="big7_span1 "><</span>
+						<span class="big7_span2 ">></span>
+					</div>				
+					<div class="big7_div3">
+						<p><a href="#">查看更多</a></p>
+						<div>
+							<img src="img/teseimg/gzdt.jpg" />
+						</div>
+						<ul>
+							<li>-关于河南移动部分业务调整公告<span>2020-04-16</span></li>
+							<li>-关于部分业务调整的详细公告 &nbsp;&nbsp;&nbsp;<span>2020-04-10</span></li>
+							<li>-中国移动权益合作公开招募公告<span>2020-03-21</span></li>
+							<li>-中国移动权益合作公开招募公告<span>2020-03-21</span></li>
+						</ul>			
+					</div>
+				</div>
+			</div>
+			<div id="bottom">
+				<div id="bottom_content">
+					<ul>
+						<li class="bottom_li"><a href="#">服务渠道</a></li>
+						<li class="bottom_li"><a href="#">站点导航</a></li>
+						<li class="bottom_li"><a href="#">快捷服务</a></li>
+						<li class="bottom_li"><a href="#">业务推荐</a></li>
+						<li class="bottom_li"><a href="#">服务指南</a></li>
+						<li v-for="lis in uls">
+							<a href="#">{{lis.lis}}</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<div id="bottom2">
+				<div id="bottom2_content">
+					<p>新闻中心 | 诚聘英才 | 企业合作 | 站点导航 | 中移信息技术公司 | 中国移动香港公司 | 政企客户分公司 | 数字家庭合作联盟 | 网站地图 | 友情链接 | 扫黄打非举报 | 打击传销</p>
+					<p> 掌上营业厅：wap.10086.cn 语音自助服务：10086 短信营业厅：10086 自助终端 营业厅 中国移动客户端下载</p>
+					<p>Copyright©1999-2020  中国移动  版权所有    本网站支持IPv6访问</p>
+					<p style="margin-bottom: 20px;">中华人民共和国增值电信业务经营许可证  经营许可证编号：A2.B1.B2-20100001</p>
+					<img src="img/bottomimg/943baa92a545c72d659789c13f1895bf_knetSealLogo.png" align="center"/>
+					<span>京ICP备05002571号</span>
+				</div>
+			</div>
+			<div id="content_left">
+				<ul>
+					<li><a href="#bigcontent1" id="gudileftli" class="gudileftli_a">享优惠</a></li>
+					<li><a href="#bigcontent2" id="gudileftli2">2F</a></li>
+					<li><a href="#bigcontent3" id="gudileftli3">2F</a></li>
+					<li><a href="#bigcontent4" id="gudileftli4">4F</a></li>
+					<li><a href="#bigcontent5" id="gudileftli5">5F</a></li>
+				</ul>
+				<a href="#top">返回顶部</a>
+			</div>
+			<div id="content_right">
+				<img src="img/bottomimg/fe7d077a2fe083dca725cb3abb1e339f_20190925143114218NRZ.jpg"/>
+				<ul>
+					<li class="right_lis0"><span>在线咨询</span><img src="img/bottomimg/人工服务请求量.png" align="center"/></li>
+					<li class="right_lis1"><span>常见问题</span><img src="img/bottomimg/问题 (2).png" align="center"/></li>
+					<li class="right_lis2"><span>投诉建议</span><img src="img/bottomimg/投诉建议 (2).png" align="center"/></li>
+				</ul>
+			</div>
+		</div>
+		<script src="js/index.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/index2.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/jquery-1.12.4.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/jquerys.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/jquery2.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/jquery3.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			//省市js index.js
+			$(function(){
+				sheng()
+			})	
+			
+			//滑动头部固定 index.js
+			$(function(){
+				yangshi()
+			})
+			window.onscroll = function(){
+				scroll()
+			}
+			
+			//轮播左列表 jquerys.js
+			$(function(){
+				lunboleft();
+			})
+			//轮播 jquerys.js
+			$(function(){
+				lunbo()
+			})
+			//花费流量切换 jquerys.js
+			$(function(){
+				que()
+			})
+			
+			//左右轮播jquery2.js
+			$(function(){
+				leftright()
+			})
+			
+			//咪咕娱乐 jquey3.js
+			$(function(){
+				migu()
+			})
+			
+			//猜你喜欢jquery3.js
+			$(function(){
+				like()
+			})
+			
+			//特色专区jquery3.js
+			$(function(){
+				tese()
+			})
+			
+			////左右侧固定jquery3.js
+			$(function(){
+				gudileft()
+			})
+			$(function(){
+				gudiright()
+			})
+		</script>
+	</body>
+</html>
